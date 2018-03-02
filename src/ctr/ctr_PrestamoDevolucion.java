@@ -35,7 +35,7 @@ public class ctr_PrestamoDevolucion {
                 if(libro.getDisponible().equals(true)) {
                     Usuario usuario = Usuario.buscar_usuario(txt_carne.getText());
                     if (!usuario.getNombre().equals("error")) {
-                        if(!usuario.buscar_libro_prestamo(libro)) {
+                        if(!usuario.buscar_libro_prestamo(libro)) { //nuevas validaciones
                             if (libro.getCantidad() > 0) {
                                 usuario.prestamo(libro);
                                 alerta_info("Exito", "Operación exitosa", "El libro fue prestado con exito");
