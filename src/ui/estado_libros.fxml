@@ -30,13 +30,13 @@
             <Font name="Georgia" size="19.0" />
          </font>
       </Text>
-      <TableView fx:id="tbv_catalogo" layoutX="46.0" layoutY="161.0" prefHeight="200.0" prefWidth="508.0">
+      <TableView fx:id="tbv_catalogo" layoutX="38.0" layoutY="161.0" prefHeight="200.0" prefWidth="535.0">
         <columns>
           <TableColumn fx:id="tbc_isbn" prefWidth="75.0" text="ISBN" />
           <TableColumn fx:id="tbc_autor" prefWidth="99.0" text="Autor" />
             <TableColumn fx:id="tbc_editorial" prefWidth="89.0" text="Editorial" />
             <TableColumn fx:id="tbc_nombre" prefWidth="143.0" text="Nombre del libro" />
-            <TableColumn fx:id="tbc_estado" prefWidth="101.0" text="Estado" />
+            <TableColumn fx:id="tbc_estado" prefWidth="130.0" text="Cantidad Disponibles" />
         </columns>
       </TableView>
    </children>

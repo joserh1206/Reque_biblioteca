@@ -35,13 +35,24 @@ public class ctr_PrestamoDevolucion {
                 if(libro.getDisponible().equals(true)) {
                     Usuario usuario = Usuario.buscar_usuario(txt_carne.getText());
                     if (!usuario.getNombre().equals("error")) {
-                        usuario.prestamo(libro);
-                        alerta_info("Exito", "Operación exitosa", "El libro fue prestado con exito");
+                        if(!usuario.buscar_libro_prestamo(libro)) {
+                            if (libro.getCantidad() > 0) {
+                                usuario.prestamo(libro);
+                                alerta_info("Exito", "Operación exitosa", "El libro fue prestado con exito");
+                            } else {
+                                alerta_error("No hay libros disponibles", "Error en el préstamo",
+                                        "No hay libros disponibles para préstamo");
+                            }
+                        } else {
+                            alerta_error("Error en el préstamo", "No es posible realizar el préstamo",
+                                    "Al usuario ya le fue prestado el libro solicitado");
+                        }
                     } else {
                         //Hacer que salte alerta de que el usuario no existe
                         alerta_error("Error durante el prestamo", "Se produjo un error con los datos ingresados",
                                 "El usuario ingresado no existe");
                     }
+
                 } else {
                     //Hacer que salte el error de que el libro ya se encuentra en prestamo
                     alerta_error("Error durante el prestamo", "Se produjo un error con los datos ingresados",

@@ -38,7 +38,10 @@ public class Usuario {
     public void prestamo(Libro libro){
         libros_prestados.add(libro);
         Libro.lista_prestamos.add(libro);
-        libro.setDisponible(false);
+        libro.setCantidad(libro.getCantidad()-1);
+        if(libro.getCantidad() == 0){
+            libro.setDisponible(false);
+        }
         setSaldo(Float.valueOf(saldo)+100f);
     }
 
@@ -46,6 +49,7 @@ public class Usuario {
         libros_prestados.remove(libro);
         Libro.lista_prestamos.remove(libro);
         libro.setDisponible(true);
+        libro.setCantidad(libro.getCantidad()+1);
     }
 
     public String getId() {

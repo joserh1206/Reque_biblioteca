@@ -7,6 +7,7 @@ public class Libro {
     private String nombre;
     private String autor;
     private String anio;
+    private int cantidad;
     private String estado;
 
     public String getAutor() {
@@ -26,14 +27,15 @@ public class Libro {
 
     public static ArrayList<Libro> lista_libros = new ArrayList<>();
     public static ArrayList<Libro> lista_prestamos = new ArrayList<>();
-    private static Libro error = new Libro("0", "error", "", "", "");
+    private static Libro error = new Libro("0", "error", "", "", "", 1);
 
-    Libro(String ISBN, String nombre, String autor, String anio, String editorial){
+    Libro(String ISBN, String nombre, String autor, String anio, String editorial, int cantidad){
         this.ISBN = ISBN;
         this.nombre = nombre;
         this.autor = autor;
         this.anio = anio;
         this.editorial = editorial;
+        this.cantidad = cantidad;
     }
 
     public static Libro buscar_libro(String ISBN){
@@ -82,5 +84,13 @@ public class Libro {
 
     public String getEstado() {
         return estado;
+    }
+
+    public int getCantidad() {
+        return cantidad;
+    }
+
+    public void setCantidad(int cantidad) {
+        this.cantidad = cantidad;
     }
 }

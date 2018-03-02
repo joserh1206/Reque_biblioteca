@@ -30,7 +30,7 @@ public class ctr_Estado_libros implements Initializable {
     private TableColumn<Libro, String> tbc_nombre;
 
     @FXML
-    private TableColumn<Libro, Boolean> tbc_estado;
+    private TableColumn<Libro, Integer> tbc_estado;
 
     public ObservableList<Libro> getLibro(){
         ObservableList<Libro> libros = FXCollections.observableArrayList();
@@ -50,7 +50,7 @@ public class ctr_Estado_libros implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         tbc_autor.setCellValueFactory(new PropertyValueFactory<>("autor"));
         tbc_editorial.setCellValueFactory(new PropertyValueFactory<>("editorial"));
-        tbc_estado.setCellValueFactory(new PropertyValueFactory<>("estado"));
+        tbc_estado.setCellValueFactory(new PropertyValueFactory<>("cantidad"));
         tbc_isbn.setCellValueFactory(new PropertyValueFactory<>("ISBN"));
         tbc_nombre.setCellValueFactory(new PropertyValueFactory<>("nombre"));
         tbv_catalogo.setItems(getLibro());
