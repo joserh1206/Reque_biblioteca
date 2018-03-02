@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="457.0" prefWidth="600.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ctr.ctr_Menu">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0c3051" height="70.0" stroke="BLACK" strokeType="INSIDE" width="418.0" />
+      <Text fill="WHITE" layoutX="14.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Menu Principal">
+         <font>
+            <Font name="Georgia Bold" size="27.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="70.0" fitWidth="158.0" layoutX="428.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@logo-tec2.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="btn_estado_libros" alignment="TOP_LEFT" layoutX="417.0" layoutY="98.0" mnemonicParsing="false" onAction="#consultar_estado_libros" prefHeight="27.0" prefWidth="170.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #32abc9;" text="Consultar estado de libros" />
+      <Button fx:id="btn_consultar_morosidad" alignment="TOP_LEFT" layoutX="417.0" layoutY="132.0" mnemonicParsing="false" onAction="#consultar_morosidad" prefHeight="27.0" prefWidth="170.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #32abc9;" text="Consultar morosidades" />
+      <Button fx:id="btn_catalogo" alignment="TOP_LEFT" layoutX="417.0" layoutY="165.0" mnemonicParsing="false" onAction="#ver_catalogo_libros" prefHeight="27.0" prefWidth="170.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #32abc9;" text="Ver catálogo de libros" />
+      <Button fx:id="btn_rprestamo" layoutX="157.0" layoutY="120.0" mnemonicParsing="false" onAction="#realizar_prestamo" prefHeight="25.0" prefWidth="118.0" text="Realizar préstamo" />
+      <Button fx:id="btn_devolucion" layoutX="157.0" layoutY="153.0" mnemonicParsing="false" onAction="#realizar_devolucion" text="Realizar devolución" />
+      <Button fx:id="btn_morosidad" layoutX="157.0" layoutY="188.0" mnemonicParsing="false" onAction="#consultar_morosidad" prefHeight="25.0" prefWidth="119.0" text="Pagar morosidades" />
+      <ImageView fitHeight="278.0" fitWidth="784.0" layoutX="8.0" layoutY="201.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@863Bookworm_Book_02.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

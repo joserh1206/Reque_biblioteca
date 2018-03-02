@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ctr.ctr_Estado_libros">
+   <children>
+      <ImageView fitHeight="109.0" fitWidth="121.0" layoutX="26.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@circ-biblioteca.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="149.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Catálogo/Estado de libros">
+         <font>
+            <Font name="Georgia" size="25.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="18.0" fitWidth="361.0" layoutX="147.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@arrow.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="408.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sistema de biblioteca">
+         <font>
+            <Font name="Georgia" size="19.0" />
+         </font>
+      </Text>
+      <TableView fx:id="tbv_catalogo" layoutX="46.0" layoutY="161.0" prefHeight="200.0" prefWidth="508.0">
+        <columns>
+          <TableColumn fx:id="tbc_isbn" prefWidth="75.0" text="ISBN" />
+          <TableColumn fx:id="tbc_autor" prefWidth="99.0" text="Autor" />
+            <TableColumn fx:id="tbc_editorial" prefWidth="89.0" text="Editorial" />
+            <TableColumn fx:id="tbc_nombre" prefWidth="143.0" text="Nombre del libro" />
+            <TableColumn fx:id="tbc_estado" prefWidth="101.0" text="Estado" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
