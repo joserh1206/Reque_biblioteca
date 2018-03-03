@@ -9,7 +9,7 @@ import javafx.stage.Stage;
 public class Main extends Application{
     public static void main(String[] args){
         Usuario usuario1 = new Usuario("2016093725", "Jose Luis", "Rodriguez");
-        Usuario usuario2 = new Usuario("2016093730", "Rolando", "Moya");
+        Usuario usuario2 = new Usuario("2015104387", "Rolando", "Moya");
         Libro libro1 = new Libro("01", "Ingles 2", "Marco F", "2015", "UCR", 2);
         Libro libro2 = new Libro("02", "Java", "Alvao R", "2016", "TEC", 3);
 
